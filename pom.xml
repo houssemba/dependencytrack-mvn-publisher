@@ -7,7 +7,8 @@
     <packaging>maven-plugin</packaging>
     <version>0.0.2-SNAPSHOT</version>
     <name>DependencyTrack Maven Publisher</name>
-    <url>http://maven.apache.org</url>
+    <url>https://github.com/houssemba/dependencytrack-mvn-publisher.git</url>
+    <description>DependencyTrack BOM publisher maven plugin</description>
 
     <licenses>
         <license>
