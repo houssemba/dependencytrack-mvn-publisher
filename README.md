@@ -1,4 +1,15 @@
-### Usage:
+# DependencyTrack Maven Publisher
+
+## Introduction
+This plugin allows you to send BOM files directly to DependencyTrack. It saves you from using `curl` and handle everything using maven.
+
+## Usage:
+
+* Create a dedicated profile : `dependencytrack`
+  * Use `CycloneDX or SPDX` to generate BOM
+  * Use `dependencytrack-mvn-publisher` to publish generated BOM
+* Run : `mvn clean install -Pdependencytrack`
+
 ```xml
         <profile>
             <id>dependencytrack</id>
@@ -40,4 +51,12 @@
         </profile>
 ```
 
-`mvn clean install -Pdependencytrack`
+## Options
+
+| Option               | Required             |                                                                                                                                                        |
+|----------------------|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| uri                  | yes                  | The URI of the DependencyTrack instance. (https://dependencytrack/api/v1/bom                                                                           |
+| apiKey               | yes                  | DependencyTrack API Key                                                                                                                                |
+| bomPath              | yes                  | Path to the generated BOM                                                                                                                              |
+| projectUuid          | yes                  | Project Uuid                                                                                                                                           |
+| userAgent            | no                   | A custom userAgent                                                                                                                                     |
