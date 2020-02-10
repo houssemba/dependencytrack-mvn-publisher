@@ -18,14 +18,14 @@
                     </plugin>
 
                     <plugin>
-                        <groupId>com.github.houssemba</groupId>
+                        <groupId>io.github.houssemba</groupId>
                         <artifactId>dependencytrack-mvn-publisher</artifactId>
-                        <version>0.0.1-SNAPSHOT</version>
+                        <version>0.0.3</version>
                         <configuration>
-                            <uri>https://dependencytrack.build.malt.tech/api/v1/bom</uri>
+                            <uri>https://dependencytrack/api/v1/bom</uri>
                             <apiKey>${env.DEPENDENCYTRACK_API_KEY}</apiKey>
                             <bomPath>target/bom.xml</bomPath>
-                            <projectUuid>098831c9-a901-4929-a786-522297c43f10</projectUuid>
+                            <projectUuid>CHANGEME</projectUuid>
                         </configuration>
                         <executions>
                             <execution>

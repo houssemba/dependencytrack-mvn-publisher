@@ -49,6 +49,8 @@
 
 
     <properties>
+        <com.squareup.okhttp3.okhttp.version>4.3.1</com.squareup.okhttp3.okhttp.version>
+        <com.squareup.okhttp3.mockwebserver.version>4.3.1</com.squareup.okhttp3.mockwebserver.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
@@ -89,24 +91,10 @@
             <version>4.3.1</version>
         </dependency>
 
-
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.6</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-plugin-api</artifactId>
-            <version>2.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.maven.plugin-tools</groupId>
-            <artifactId>maven-plugin-annotations</artifactId>
-            <version>3.6.0</version>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -171,13 +159,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>mockwebserver</artifactId>
-            <version>4.3.1</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>org.apache.maven.plugin-testing</groupId>
             <artifactId>maven-plugin-testing-harness</artifactId>
             <version>${maven-plugin-testing-harness.version}</version>
@@ -188,6 +169,13 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>${maven-surefire-plugin.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>mockwebserver</artifactId>
+            <version>4.3.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
